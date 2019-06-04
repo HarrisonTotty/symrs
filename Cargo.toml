@@ -1,0 +1,10 @@
+[package]
+authors     = ["Harrison Totty <harrisongtotty@gmail.com>"]
+description = "A symbolic mathematics library for Rust."
+edition     = "2018"
+name        = "symrs"
+publish     = false
+readme      = "README.md"
+version     = "0.1.0"
+
+[dependencies]
