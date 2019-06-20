@@ -1,0 +1,62 @@
+// {#
+//   The following template is utilized to create new operation definitions.
+// #}
+// {% include 'doc.template' %}
+// {% do require('this.data_source') %}
+// {% set operation = get(this.data_source) %}
+// {% set arity = operation.arguments|length %}
+
+use crate::core::*;
+use crate::structures::operations::*;
+
+// {# ---------- Calculations ---------- #}
+// {% if arity == 0 %}
+// {% set struct_args = '' %}
+// {% set elements = 'None' %}
+// {% elif arity == 1 %}
+// {% set struct_args = '(pub Expression)' %}
+// {% set elements = 'Some(vec![self.0.clone()])' %}
+// {% elif arity == 2 %}
+// {% set struct_args = '(pub Expression, pub Expression)' %}
+// {% set elements = 'Some(vec![self.0.clone(), self.1.clone()])' %}
+// {% elif arity == 3 %}
+// {% set struct_args = '(pub Expression, pub Expression, pub Expression)' %}
+// {% set elements = 'Some(vec![self.0.clone(), self.1.clone(), self.2.clone()])' %}
+// {% elif arity == 4 %}
+// {% set struct_args = '(pub Expression, pub Expression, pub Expression, pub Expression)' %}
+// {% set elements = 'Some(vec![self.0.clone(), self.1.clone(), self.2.clone(), self.3.clone()])' %}
+// {% else %}
+// {% set struct_args = '(pub Vec<Expression>)' %}
+// {% set elements = 'Some(self.0)' %}
+// {% endif %}
+
+// {% for line in operation.desc.splitlines() %}
+/// {{ line }}
+// {% endfor %}
+pub struct {{ operation.name }}{{ struct_args }};
+
+/// Method implementations for `{{ operation.name }}`
+impl {{ operation.name }} {
+    /// Creates a new instance of the structure, returning an expression bound to it.
+    pub fn new({{ format_list('{}: Expression', operation.arguments)|join(', ') }}) -> Expression {
+        Expression::new(std::rc::Rc::new({{ operation.name }}({{ operation.arguments|join(', ') }})))
+    }
+}
+
+/// Implement `Structure` for `{{ operation.name }}`
+impl Structure for {{ operation.name }} {
+    /// Returns the collection of elements contained within this expression.
+    fn elements(&self) -> Elements {
+        {{ elements }}
+    }
+    
+    /// Returns the name of this `Structure`.
+    fn name(&self) -> Option<String> {
+        Some(String::from("{{ operation.name }}"))
+    }
+}
+
+/// Implement `Operation` for `{{ operation.name }}`
+impl Operation for {{ operation.name }} {
+    
+}

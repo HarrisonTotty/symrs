@@ -1,0 +1,86 @@
+# Structures - Trigonometric Operations
+# -------------------------------------
+
+# ---------- Arccosecant ----------
+structures_operations_trigonometric_arccosecant:
+  name: "Arccosecant"
+  desc: "Represents the trigonometric arc-cosecant operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Arccosine ----------
+structures_operations_trigonometric_arccosine:
+  name: "Arccosine"
+  desc: "Represents the trigonometric arc-cosine operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Arccotangent ----------
+structures_operations_trigonometric_arccotangent:
+  name: "Arccotangent"
+  desc: "Represents the trigonometric arc-cotangent operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Arcsecant ----------
+structures_operations_trigonometric_arcsecant:
+  name: "Arcsecant"
+  desc: "Represents the trigonometric arc-secant operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Arcsine ----------
+structures_operations_trigonometric_arcsine:
+  name: "Arcsine"
+  desc: "Represents the trigonometric arc-sine operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Arctangent ----------
+structures_operations_trigonometric_arctangent:
+  name: "Arctangent"
+  desc: "Represents the trigonometric arc-tangent operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Cosecant ----------
+structures_operations_trigonometric_cosecant:
+  name: "Cosecant"
+  desc: "Represents the trigonometric cosecant operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Cosine ----------
+structures_operations_trigonometric_cosine:
+  name: "Cosine"
+  desc: "Represents the trigonometric cosine operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Cotangent ----------
+structures_operations_trigonometric_cotangent:
+  name: "Cotangent"
+  desc: "Represents the trigonometric cotangent operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Secant ----------
+structures_operations_trigonometric_secant:
+  name: "Secant"
+  desc: "Represents the trigonometric secant operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Sine ----------
+structures_operations_trigonometric_sine:
+  name: "Sine"
+  desc: "Represents the trigonometric sine operation on an expression."
+  arguments:
+    - "argument"
+
+# ---------- Tangent ----------
+structures_operations_trigonometric_tangent:
+  name: "Tangent"
+  desc: "Represents the trigonometric tangent operation on an expression."
+  arguments:
+    - "argument"

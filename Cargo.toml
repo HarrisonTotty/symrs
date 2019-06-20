@@ -7,4 +7,6 @@ publish     = false
 readme      = "README.md"
 version     = "0.1.0"
 
-[dependencies]
+[lib]
+name = "symrs"
+path = "build/lib.rs"

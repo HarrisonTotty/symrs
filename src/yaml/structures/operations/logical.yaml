@@ -1,0 +1,89 @@
+# Structures - Logical Operations
+# -------------------------------
+
+# ---------- AlternativeDenial ----------
+structures_operations_logical_alternativedenial:
+  name: "AlternativeDenial"
+  desc: "Represents the logical alternative denial operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- Biconditional ----------
+structures_operations_logical_biconditional:
+  name: "Biconditional"
+  desc: "Represents the logical biconditional operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- Conjunction ----------
+structures_operations_logical_conjunction:
+  name: "Conjunction"
+  desc: "Represents the logical conjunction operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- ConverseImplication ----------
+structures_operations_logical_converseimplication:
+  name: "ConverseImplication"
+  desc: "Represents the logical converse implication operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- ConverseNonimplication ----------
+structures_operations_logical_conversenonimplication:
+  name: "ConverseNonimplication"
+  desc: "Represents the logical converse nonimplication operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- ExclusiveDisjunction ----------
+structures_operations_logical_exclusivedisjunction:
+  name: "ExclusiveDisjunction"
+  desc: "Represents the logical exclusive disjunction operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- Implication ----------
+structures_operations_logical_implication:
+  name: "Implication"
+  desc: "Represents the logical implication operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- InclusiveDisjunction ----------
+structures_operations_logical_inclusivedisjunction:
+  name: "InclusiveDisjunction"
+  desc: "Represents the logical inclusive disjunction operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- JointDenial ----------
+structures_operations_logical_jointdenial:
+  name: "JointDenial"
+  desc: "Represents the logical joint dential operation between two expressions."
+  arguments:
+    - "left"
+    - "right"
+
+# ---------- LogicalNegation ----------
+structures_operations_logical_logicalnegation:
+  name: "LogicalNegation"
+  desc: "Represents the logical negation operation on an expression."
+  arguments:
+    - "base"
+
+# ---------- Nonimplication ----------
+structures_operations_logical_nonimplication:
+  name: "Nonimplication"
+  desc: "Represents the logical nonimplication operation between two expressions."
+  arguments:
+    - "left"
+    - "right"

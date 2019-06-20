@@ -1,0 +1,5 @@
+// {% if this.desc is defined %}
+// {% for line in this.desc.splitlines() %}
+//! {{line}}
+// {% endfor %}
+// {% endif %}

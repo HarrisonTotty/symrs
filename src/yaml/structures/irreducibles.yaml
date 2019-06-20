@@ -1,0 +1,27 @@
+# Structures - Irreducibles
+# -------------------------
+
+structures_irreducibles:
+  # ----- Booleans ----
+  - name: "Boolean"
+    desc: "Represents a logical truth value."
+    inner_value_name: "InnerValue::Bool"
+    inner_value_type: "bool"
+
+  # ----- Integers -----
+  - name: "Integer"
+    desc: "Represents a single integer value."
+    inner_value_name: "InnerValue::I128"
+    inner_value_type: "i128"
+
+  # ----- Reals -----
+  - name: "Real"
+    desc: "Represents a real value."
+    inner_value_name: "InnerValue::F64"
+    inner_value_type: "f64"
+
+  # ----- Symbols -----
+  - name: "Symbol"
+    desc: "Represents a mathematical symbol with a particular name."
+    inner_value_name: "InnerValue::Str"
+    inner_value_type: "&'static str"
