@@ -1,6 +1,8 @@
 # symrs Template Configuration File
 # ---------------------------------
 
+# -------- Includes & Extensions --------
+
 # Include additional Jinja functions.
 lib:
   - "pylib/*.py"
@@ -11,6 +13,9 @@ include:
   - "yaml/*/*.yaml"
   - "yaml/*/*/*.yaml"
   - "yaml/*/*/*/*.yaml"
+
+# ---------------------------------------
+
 
 # ---------- Global Variables -----------
 
@@ -46,8 +51,5 @@ files:
       - "crate::structures::operations::elementary::*"
       - "crate::structures::operations::logical::*"
       - "crate::structures::operations::trigonometric::*"
-
-  # ----- Structures / Irreducibles -----
-  - dst: "structures/irreducibles/mod.rs"
-    desc: "Contains definitions for the various core irreducible expressions."      
+  
 # ---------------------------------------

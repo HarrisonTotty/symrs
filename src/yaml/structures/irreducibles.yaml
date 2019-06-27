@@ -1,6 +1,10 @@
 # Structures - Irreducibles
 # -------------------------
 
+files:
+  - dst: "structures/irreducibles/mod.rs"
+    desc: "Contains definitions for the various core irreducible expressions." 
+
 structures_irreducibles:
   # ----- Booleans ----
   - name: "Boolean"
