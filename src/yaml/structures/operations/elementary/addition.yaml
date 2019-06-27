@@ -1,0 +1,16 @@
+# Elementary Addition
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/addition.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary addition operation."
+    name: "Addition"
+    struct_desc: "Represents the elementary addition operation between two expressions."
+    arguments:
+      - "addend"
+      - "augend"
+    attributes:
+        - "Associative"
+        - "Commutative"
+        - "Identity(crate::structures::irreducibles::Integer::new(0))"

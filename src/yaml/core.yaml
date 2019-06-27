@@ -1,0 +1,40 @@
+# Core Files
+# ----------
+
+files:
+  # ----- Core Definitions -----
+  - dst: "core/mod.rs"
+    src: "doc-mod.template"
+    desc: "Brings the core definitions of the `symrs` library into scope."
+    private_modules:
+      - "attribute"
+      - "computation"
+      - "expression"
+      - "kernel"
+      - "structure"
+    public_use:
+      - "attribute::*"
+      - "computation::*"
+      - "expression::*"
+      - "kernel::*"
+      - "structure::*"
+
+  # ----- Attribute Definition -----
+  - dst: "core/attribute.rs"
+    desc: "Contains the definition of a mathematical attribute."
+
+  # ----- Computation Definition -----
+  - dst: "core/computation.rs"
+    desc: "Contains the definition of the `symrs` computation."
+
+  # ----- Expression Definition -----
+  - dst: "core/expression.rs"
+    desc: "Contains the definition of the `symrs` expression."
+
+  # ----- Kernel Definition -----
+  - dst: "core/kernel.rs"
+    desc: "Contains the definition of the `symrs` runtime kernel."
+
+  # ----- Structure Definition -----
+  - dst: "core/structure.rs"
+    desc: "Contains the definition of the `symrs` structure."

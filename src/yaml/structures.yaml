@@ -1,0 +1,10 @@
+# Structures
+# ----------
+
+files:
+  - dst: "structures/mod.rs"
+    src: "doc-mod.template"
+    desc: "Contains definitions for various common mathematical structures."
+    public_modules:
+      - "irreducibles"
+      - "operations"

@@ -1,0 +1,12 @@
+# Logical Biconditional
+# ---------------------
+
+files:
+  - dst: "structures/operations/logical/biconditional.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical biconditional operation."
+    name: "Biconditional"
+    struct_desc: "Represents the logical biconditional operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

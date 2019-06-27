@@ -7,6 +7,9 @@ publish     = false
 readme      = "README.md"
 version     = "0.1.0"
 
+[package.metadata.docs.rs]
+rustdoc-args = [ "--html-in-header", "build/katex.html" ]
+
 [lib]
 name = "symrs"
 path = "build/lib.rs"

@@ -1,0 +1,12 @@
+# Elementary Logarithm
+# --------------------
+
+files:
+  - dst: "structures/operations/elementary/logarithm.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary logarithm operation."
+    name: "Logarithm"
+    struct_desc: "Represents the elementary logarithm operation between two expressions."
+    arguments:
+      - "base"
+      - "expression"

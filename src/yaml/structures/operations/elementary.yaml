@@ -1,81 +1,30 @@
 # Structures - Elementary Operations
 # -----------------------------------
 
-# ---------- Addition ----------
-structures_operations_elementary_addition:
-  name: "Addition"
-  desc: "Represents the elementary addition operation between two expressions."
-  arguments:
-    - "addend"
-    - "augend"
-
-# ---------- Division ----------
-structures_operations_elementary_division:
-  name: "Division"
-  desc: "Represents the elementary division operation between two expressions."
-  arguments:
-    - "dividend"
-    - "divisor"
-
-# ---------- Exponentiation ----------
-structures_operations_elementary_exponentiation:
-  name: "Exponentiation"
-  desc: "Represents the elementary exponentiation operation between two expressions."
-  arguments:
-    - "base"
-    - "exponent"
-
-# ---------- Logarithm ----------
-structures_operations_elementary_logarithm:
-  name: "Logarithm"
-  desc: "Represents the elementary logarithm operation between two expressions."
-  arguments:
-    - "base"
-    - "target"
-
-# ---------- Modulo ----------
-structures_operations_elementary_modulo:
-  name: "Modulo"
-  desc: "Represents the elementary modulo operation between two expressions."
-  arguments:
-    - "dividend"
-    - "divisor"
-
-# ---------- Modulus ----------
-structures_operations_elementary_modulus:
-  name: "Modulus"
-  desc: "Represents the elementary modulus operation between two expressions."
-  arguments:
-    - "base"
-    - "modulus"
-
-# ---------- Multiplication ----------
-structures_operations_elementary_multiplication:
-  name: "Multiplication"
-  desc: "Represents the elementary multiplication operation between two expressions."
-  arguments:
-    - "multiplicand"
-    - "multiplier"
-
-# ---------- Negation ----------
-structures_operations_elementary_negation:
-  name: "Negation"
-  desc: "Represents the elementary negation operation on an expression."
-  arguments:
-    - "base"
-
-# ---------- Radical ----------
-structures_operations_elementary_radical:
-  name: "Radical"
-  desc: "Represents the elementary radical operation between two expressions."
-  arguments:
-    - "index"
-    - "radicand"
-
-# ---------- Subtraction ----------
-structures_operations_elementary_subtraction:
-  name: "Subtraction"
-  desc: "Represents the elementary subtraction operation between two expressions."
-  arguments:
-    - "minuend"
-    - "subtrahend"
+files:
+  # ----- Elementary Operations -----
+  - dst: "structures/operations/elementary/mod.rs"
+    src: "doc-mod.template"
+    desc: "Contains the definitions for the various elementary operations."
+    private_modules:
+      - "addition"
+      - "division"
+      - "exponentiation"
+      - "logarithm"
+      - "modulo"
+      - "modulus"
+      - "multiplication"
+      - "negation"
+      - "radical"
+      - "subtraction"
+    public_use:
+      - "addition::*"
+      - "division::*"
+      - "exponentiation::*"
+      - "logarithm::*"
+      - "modulo::*"
+      - "modulus::*"
+      - "multiplication::*"
+      - "negation::*"
+      - "radical::*"
+      - "subtraction::*"

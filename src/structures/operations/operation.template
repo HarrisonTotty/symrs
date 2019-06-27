@@ -2,9 +2,8 @@
 //   The following template is utilized to create new operation definitions.
 // #}
 // {% include 'doc.template' %}
-// {% do require('this.data_source') %}
-// {% set operation = get(this.data_source) %}
-// {% set arity = operation.arguments|length %}
+// {% do require('this.arguments', 'this.name') %}
+// {% set arity = this.arguments|length %}
 
 use crate::core::*;
 use crate::structures::operations::*;
@@ -30,21 +29,34 @@ use crate::structures::operations::*;
 // {% set elements = 'Some(self.0)' %}
 // {% endif %}
 
-// {% for line in operation.desc.splitlines() %}
+// {% for line in this.struct_desc.splitlines() %}
 /// {{ line }}
 // {% endfor %}
-pub struct {{ operation.name }}{{ struct_args }};
+pub struct {{ this.name }}{{ struct_args }};
 
-/// Method implementations for `{{ operation.name }}`
-impl {{ operation.name }} {
+/// Method implementations for `{{ this.name }}`
+impl {{ this.name }} {
     /// Creates a new instance of the structure, returning an expression bound to it.
-    pub fn new({{ format_list('{}: Expression', operation.arguments)|join(', ') }}) -> Expression {
-        Expression::new(std::rc::Rc::new({{ operation.name }}({{ operation.arguments|join(', ') }})))
+    pub fn new({{ format_list('{}: Expression', this.arguments)|join(', ') }}) -> Expression {
+        Expression::new(std::rc::Rc::new({{ this.name }}({{ this.arguments|join(', ') }})))
     }
 }
 
-/// Implement `Structure` for `{{ operation.name }}`
-impl Structure for {{ operation.name }} {
+/// Implement `Structure` for `{{ this.name }}`
+impl Structure for {{ this.name }} {
+    /// Returns the collection of attributes associated with this `Structure`.
+    fn attributes(&self) -> Attributes {
+        Some(
+            vec![
+                // {% if this.attributes is defined %}
+                // {% for attribute in this.attributes %}
+                Attribute::{{ attribute }},
+                // {% endfor %}
+                // {% endif %}
+                ]
+        )
+    }
+    
     /// Returns the collection of elements contained within this expression.
     fn elements(&self) -> Elements {
         {{ elements }}
@@ -52,11 +64,11 @@ impl Structure for {{ operation.name }} {
     
     /// Returns the name of this `Structure`.
     fn name(&self) -> Option<String> {
-        Some(String::from("{{ operation.name }}"))
+        Some(String::from("{{ this.name }}"))
     }
 }
 
-/// Implement `Operation` for `{{ operation.name }}`
-impl Operation for {{ operation.name }} {
+/// Implement `Operation` for `{{ this.name }}`
+impl Operation for {{ this.name }} {
     
 }

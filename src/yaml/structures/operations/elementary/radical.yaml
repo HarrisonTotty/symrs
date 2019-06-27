@@ -1,0 +1,12 @@
+# Elementary Radical
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/radical.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary radical (nth-root) operation."
+    name: "Radical"
+    struct_desc: "Represents the elementary radical (nth-root) operation between two expressions."
+    arguments:
+      - "index"
+      - "radicand"

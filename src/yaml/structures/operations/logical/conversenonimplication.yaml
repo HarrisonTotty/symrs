@@ -1,0 +1,12 @@
+# Logical Converse Nonimplication
+# -------------------------------
+
+files:
+  - dst: "structures/operations/logical/conversenonimplication.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical converse nonimplication operation."
+    name: "ConverseNonimplication"
+    struct_desc: "Represents the logical converse nonimplication operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

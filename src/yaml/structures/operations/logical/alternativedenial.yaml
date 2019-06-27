@@ -1,0 +1,12 @@
+# Logical Alternative Denial
+# --------------------------
+
+files:
+  - dst: "structures/operations/logical/alternativedenial.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical alternative denial operation."
+    name: "AlternativeDenial"
+    struct_desc: "Represents the logical alternative denial operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

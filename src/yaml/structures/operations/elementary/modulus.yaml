@@ -1,0 +1,11 @@
+# Elementary Modulus
+# ------------------
+
+files:
+  - dst: "structures/operations/elementary/modulus.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary modulus operation."
+    name: "Modulus"
+    struct_desc: "Represents the elementary modulus (absolute value) operation on an expression."
+    arguments:
+      - "expression"

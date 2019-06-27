@@ -51,6 +51,11 @@ impl {{ structure.name }} {
 
 /// `Structure` implementation for `{{ structure.name }}`
 impl Structure for {{ structure.name }} {
+    /// Returns the collection of attributes associated with this `Structure`.
+    fn attributes(&self) -> Attributes {
+        Some(vec![Attribute::Irreducible])
+    }
+    
     /// Returns the name of this `Structure`.
     fn name(&self) -> Option<String> {
         Some(String::from("{{ structure.name }}"))

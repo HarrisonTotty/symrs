@@ -1,0 +1,14 @@
+# Elementary Addition
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/subtraction.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary subtraction operation."
+    name: "Subtraction"
+    struct_desc: "Represents the elementary subtraction operation between two expressions."
+    arguments:
+      - "minuend"
+      - "subtrahend"
+    attributes:
+        - "Anticommutative"

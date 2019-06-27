@@ -1,0 +1,10 @@
+# Structures - Operations
+# -----------------------
+
+files:
+  - dst: "structures/operations/mod.rs"
+    desc: "Contains the definitions for operation expressions."
+    public_modules:
+      - "elementary"
+      - "logical"
+      - "trigonometric"

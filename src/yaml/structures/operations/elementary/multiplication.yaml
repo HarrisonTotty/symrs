@@ -1,0 +1,17 @@
+# Elementary Multiplication
+# -------------------------
+
+files:
+  - dst: "structures/operations/elementary/multiplication.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary multiplication operation."
+    name: "Multiplication"
+    struct_desc: "Represents the elementary multiplication operation between two expressions."
+    arguments:
+      - "multiplicand"
+      - "multiplier"
+    attributes:
+        - "Associative"
+        - "Commutative"
+        - "Distributive(String::from(\"Addition\"))"
+        - "Identity(crate::structures::irreducibles::Integer::new(1))"

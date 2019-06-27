@@ -1,0 +1,12 @@
+# Logical Conjunction
+# -------------------
+
+files:
+  - dst: "structures/operations/logical/conjunction.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical conjunction operation."
+    name: "Conjunction"
+    struct_desc: "Represents the logical conjunction operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

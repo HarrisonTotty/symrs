@@ -1,0 +1,12 @@
+# Elementary Division
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/division.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary division operation."
+    name: "Division"
+    struct_desc: "Represents the elementary division operation between two expressions."
+    arguments:
+      - "dividend"
+      - "divisor"

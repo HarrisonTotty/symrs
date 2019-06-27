@@ -1,0 +1,11 @@
+# Trigonometric Arc-Cosecant
+# --------------------------
+
+files:
+  - dst: "structures/operations/trigonometric/arccosecant.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the trigonometric arc-cosecant operation."
+    name: "ArcCosecant"
+    struct_desc: "Represents the trigonometric arc-cosecant operation on an expression."
+    arguments:
+      - "expression"

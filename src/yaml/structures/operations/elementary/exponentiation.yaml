@@ -1,0 +1,12 @@
+# Elementary Exponentiation
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/exponentiation.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary exponentiation operation."
+    name: "Exponentiation"
+    struct_desc: "Represents the elementary exponentiation operation between two expressions."
+    arguments:
+      - "base"
+      - "exponent"

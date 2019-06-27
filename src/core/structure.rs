@@ -1,10 +1,17 @@
 // {% include 'doc.template' %}
 
 use crate::core::expression::*;
+use crate::core::attribute::*;
 
 // --------------- Types ---------------
 
-pub type Elements    = Option<Vec<Expression>>;
+/// The collection of attributes contained within an expression.
+pub type Attributes = Option<Vec<Attribute>>;
+
+/// The collection of elements contained within an expression.
+pub type Elements = Option<Vec<Expression>>;
+
+/// The collection of keyword elements contained within an expression.
 pub type KeyElements = Option<std::collections::HashMap<Expression, Expression>>;
 
 // -------------------------------------
@@ -18,6 +25,11 @@ pub type KeyElements = Option<std::collections::HashMap<Expression, Expression>>
 /// Structures may or may not have a name and may or may not contain a set of
 /// iterative/keyword subexpressions called `Elements`.
 pub trait Structure {
+    /// Returns the collection of attributes associated with this structure.
+    fn attributes(&self) -> Attributes {
+        None
+    }
+    
     /// Returns the names of the top-level elements contained within this structure.
     fn element_names(&self) -> Option<Vec<Option<String>>> {
         match self.elements() {
@@ -102,6 +114,55 @@ pub trait Structure {
             },
             (None, None) => name_string
         }
+    }
+}
+
+// -------------------------------------
+
+
+// --------- Generic Structure ---------
+
+/// Represents a generic mathematical structure.
+pub struct MathematicalStructure {
+    /// The name of this structure.
+    name: String,
+    
+    /// The elements contained within this structure.
+    elements: Elements,
+    
+    /// The key elements contained within this structure.
+    key_elements: KeyElements
+}
+
+/// Implements custom methods on a `MathematicalStructure`.
+impl MathematicalStructure {
+
+    /// Creates a new generic mathematical structure with the specified name,
+    /// elements, and key elements.
+    pub fn new(name: String, elements: Elements, key_elements: KeyElements) -> Expression {
+        Expression(std::rc::Rc::new(MathematicalStructure {
+            name: name,
+            elements: elements,
+            key_elements: key_elements
+        }))
+    }
+}
+
+/// `Structure` implementation for `MathematicalStructure`.
+impl Structure for MathematicalStructure {
+    /// Returns the name of this `Structure`.
+    fn name(&self) -> Option<String> {
+        Some(self.name.clone())
+    }
+     
+    /// Returns the elements contained within this `Structure`.
+    fn elements(&self) -> Elements {
+        self.elements.clone()
+    }
+     
+    /// Returns the key elements contained within this `Structure`.
+    fn key_elements(&self) -> KeyElements {
+        self.key_elements.clone()
     }
 }
 

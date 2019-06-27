@@ -1,0 +1,12 @@
+# Elementary Modulo
+# -----------------
+
+files:
+  - dst: "structures/operations/elementary/modulo.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary modulo operation."
+    name: "Modulo"
+    struct_desc: "Represents the elementary modulo (remainder) operation between two expressions."
+    arguments:
+      - "dividend"
+      - "divisor"

@@ -1,0 +1,12 @@
+# Logical Converse Implication
+# ----------------------------
+
+files:
+  - dst: "structures/operations/logical/converseimplication.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical converse implication operation."
+    name: "ConverseImplication"
+    struct_desc: "Represents the logical converse implication operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

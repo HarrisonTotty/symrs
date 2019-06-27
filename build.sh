@@ -3,6 +3,7 @@
 
 set -e
 
+export RUSTDOCFLAGS="--html-in-header build/katex.html"
 export TMPL_BLOCK_END_STR='%}'
 export TMPL_BLOCK_START_STR='// {%'
 export TMPL_COMMENT_END_STR='#}'

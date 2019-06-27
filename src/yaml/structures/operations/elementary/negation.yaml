@@ -1,0 +1,11 @@
+# Elementary Addition
+# -------------------
+
+files:
+  - dst: "structures/operations/elementary/negation.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the elementary negation operation."
+    name: "Negation"
+    struct_desc: "Represents the elementary negation operation on an expression."
+    arguments:
+      - "expression"
