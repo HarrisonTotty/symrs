@@ -1,0 +1,12 @@
+# Logical Implication
+# -------------------
+
+files:
+  - dst: "structures/operations/logical/implication.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical implication operation."
+    name: "Implication"
+    struct_desc: "Represents the logical implication operation between two expressions."
+    arguments:
+      - "left"
+      - "right"

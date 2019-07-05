@@ -1,5 +1,5 @@
-# Elementary Addition
-# -------------------
+# Addition
+# --------
 
 files:
   - dst: "structures/operations/elementary/addition.rs"

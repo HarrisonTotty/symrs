@@ -1,0 +1,12 @@
+# Logical Exclusive Disjunction
+# -----------------------------
+
+files:
+  - dst: "structures/operations/logical/exclusivedisjunction.rs"
+    src: "structures/operations/operation.template"
+    desc: "Contains the definitions of the logical exclusive disjunction operation."
+    name: "ExclusiveDisjunction"
+    struct_desc: "Represents the logical exclusive disjunction operation between two expressions."
+    arguments:
+      - "left"
+      - "right"
